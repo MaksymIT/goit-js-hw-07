@@ -3,8 +3,6 @@ import { galleryItems } from "./gallery-items";
 const galleryList = document.querySelector(".gallery");
 const markup = createMarkup(galleryItems);
 
-galleryList.insertAdjacentHTML("beforeend", markup);
-
 function createMarkup(galleryItems) {
   return galleryItems
     .map(({ preview, original, description }) => {
@@ -21,6 +19,7 @@ function createMarkup(galleryItems) {
     })
     .join("");
 }
+galleryList.insertAdjacentHTML("beforeend", markup);
 
 
 galleryList.addEventListener("click", handleClick);
