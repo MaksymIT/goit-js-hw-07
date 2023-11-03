@@ -21,3 +21,9 @@ function createMarkup(galleryItems) {
 
 galleryList.insertAdjacentHTML("beforeend", markup);
 
+const lightboxModal = new SimpleLightbox('.gallery a',
+  {
+    captionsData: 'alt',
+    optionsPosition: 'bottom',
+    captionDelay: 250,
+});
